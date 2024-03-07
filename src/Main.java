@@ -4,7 +4,37 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        aprovado_reprovado();
+        atividadeInt();
+    }
+
+    public static void atividadeInt(){
+        escreva("Digite o valor da sua hora: ");
+        double valor_hora = lerDouble();
+        escreva("Digite a quantidade de horas trabalhadas no mês: ");
+        double quantidade_horas = lerDouble();
+
+        double salario_bruto = quantidade_horas * valor_hora;
+        escreva("Salário bruto: R$ " + salario_bruto);
+
+        double imposto_renda = salario_bruto * 0.05;
+        escreva("(-) IR (5%): R$ " + imposto_renda);
+
+        double inss = salario_bruto * 0.1;
+        escreva("(-) INSS (10%): R$ " + inss);
+
+        double fgts = salario_bruto * 0.11;
+        escreva("FGTS (11%): R$ " + fgts);
+
+        double sindicato = salario_bruto * 0.03;
+        escreva("Sindicato: R$ " + sindicato);
+
+        double total_descontos = imposto_renda + inss + sindicato;
+        escreva("Total de descontos: R$ " + total_descontos);
+
+
+        double salario_liquido = salario_bruto - total_descontos;
+        escreva("Salário líquido: R$ " + salario_liquido);
+
     }
 
     public static void aprovado_reprovado(){
@@ -30,17 +60,17 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         return scanner.nextDouble();
     }
+
     public static void escreva(String frase){
         System.out.println(frase);
     }
-    public static void aula_07_03(){
+    public static void verificar_igual_10(){
         int numero  = 8;
         if(numero == 10){
             System.out.println("O valor é igual a 10!");
         }else{
             System.out.println("O valor é diferente de 10");
         }
-
 
         Scanner leitura = new Scanner(System.in);
         System.out.println("Qual a sua idade?");
