@@ -4,13 +4,26 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        aula_07_03();
+        aprovado_reprovado();
     }
 
     public static void aprovado_reprovado(){
         escreva("Digite sua nota final:");
         double nota = lerDouble();
-
+        if(nota >= 7){
+            escreva("Aprovado!");
+        } else if (nota >= 6) {
+            escreva("Recuperação!");
+            escreva("Digite sua nota de recuperação: ");
+            double nota_recuperacao = lerDouble();
+            if (nota_recuperacao >= 5){
+                escreva("Aprovado!");
+            } else{
+                escreva("Reprovado!");
+            }
+        } else {
+            escreva("Reprovado!");
+        }
     }
 
     public  static double lerDouble(){
