@@ -77,7 +77,7 @@ public class Main {
     public static void escreva(String frase){
         System.out.println(frase);
     }
-    public static void verificar_igual_10(){
+    public static void verificarIgual10(){
         int numero  = 8;
         if(numero == 10){
             System.out.println("O valor é igual a 10!");
@@ -95,17 +95,11 @@ public class Main {
             System.out.println("Ops, você não pode acessar o sistema!");
         }
 
-        System.out.println("Digite um número para saber se é par ou ímpar: ");
-        int par_impar = leitura.nextInt();
-
-        if(idade >=18){
-            System.out.println("Bem vindo ao sistema!");
-        }else{
-            System.out.println("Ops, você não pode acessar o sistema!");
-        }
+        //System.out.println("Digite um número para saber se é par ou ímpar: ");
+        //fazer lógica par ou ímpar;
     }
 
-    public static void aula_05_03(){
+    public static void cadastrarUsuario(){
         System.out.println("===========Cadastro===========");
 
         Scanner scanner = new Scanner(System.in);
@@ -118,7 +112,7 @@ public class Main {
         float altura = scanner.nextFloat();
         System.out.printf("Uau! "+ palavra + " sua idade é " + idade + " e sua altura é " + altura);
 
-        final int numero = 74;  // final == const
+        //final int numero = 74;  final == const
 
     }
 }
