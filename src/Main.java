@@ -16,8 +16,8 @@ public class Main {
         double salario_bruto = quantidade_horas * valor_hora;
         escreva("Salário bruto: R$ " + salario_bruto);
 
-        double imposto_renda = salario_bruto * 0.05;
-        escreva("(-) IR (5%): R$ " + imposto_renda);
+        double imposto_renda = calcularIR(salario_bruto);
+        escreva("(-) IR: R$ " + imposto_renda);
 
         double inss = salario_bruto * 0.1;
         escreva("(-) INSS (10%): R$ " + inss);
@@ -34,10 +34,23 @@ public class Main {
 
         double salario_liquido = salario_bruto - total_descontos;
         escreva("Salário líquido: R$ " + salario_liquido);
+    }
+    public static double calcularIR(double salarioBruto){
+        double resultado;
+        if (salarioBruto <= 900){
+            resultado = 0.0;
+        }else if (salarioBruto <= 1500) {
+            resultado = salarioBruto * 0.05;
+        } else if (salarioBruto <= 2500) {
+            resultado = salarioBruto * 0.1;
+        } else {
+            resultado = salarioBruto * 0.2;
+        }
 
+        return resultado;
     }
 
-    public static void aprovado_reprovado(){
+    public static void aprovadoReprovado(){
         escreva("Digite sua nota final:");
         double nota = lerDouble();
         if(nota >= 7){
