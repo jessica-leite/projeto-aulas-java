@@ -4,9 +4,30 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        atividadeInt();
+        verificarDiaSemana();
     }
 
+    public static void verificarDiaSemana(){
+        escreva("Digite um número correspondente a um dia da semana considerando o (1) Domingo");
+        int diaSemana = lerInt();
+        switch (diaSemana){
+            case 1:
+                escreva("Domingo");
+                break;
+            case 2:
+                escreva("Segunda-feira");
+                break;
+            //continuar
+            default:
+                escreva("Dia da semana inválido!");
+        }
+    }
+
+    public static int lerInt(){
+        Scanner scanner= new Scanner(System.in);
+        return scanner.nextInt();
+
+    }
     public static void atividadeInt(){
         escreva("Digite o valor da sua hora: ");
         double valor_hora = lerDouble();
