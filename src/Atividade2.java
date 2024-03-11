@@ -6,7 +6,7 @@ public class Atividade2 {
         //1.Solicite o nome e a idade do usuário. Em seguida, exiba uma mensagem com essas informações.
         System.out.println("Digite seu nome: ");
         Scanner scanner = new Scanner(System.in);
-        String nome = scanner.next();
+        String nome = scanner.nextLine();
         System.out.println("Digite sua idade: ");
         int idade = scanner.nextInt();
         System.out.println("Seu nome é " + nome + " e sua idade é " + idade + "!");
