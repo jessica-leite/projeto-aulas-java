@@ -2,6 +2,66 @@ import java.util.Scanner;
 
 public class Atividade2 {
 
+    public static void operacoesNumeros(){
+        //2.Peça dois números ao usuário e realize operações de adição, subtração, multiplicação e divisão.
+        // Exiba os resultados.
+        System.out.println("Digite o primeiro número: ");
+        Scanner scanner = new Scanner(System.in);
+        double primeiroNumero = scanner.nextDouble();
+        System.out.println("Digite o segundo número: ");
+        double segundoNumero = scanner.nextDouble();
+
+        System.out.println("adição: " + primeiroNumero + " + " + segundoNumero + " = " + (primeiroNumero + segundoNumero));
+        System.out.println("subtração: " + primeiroNumero + " - " + segundoNumero + " = " + (primeiroNumero - segundoNumero));
+        System.out.println("multiplicação: " + primeiroNumero + " * " + segundoNumero + " = " + (primeiroNumero * segundoNumero));
+        System.out.println("divisão: " + primeiroNumero + " / " + segundoNumero + " = " + (primeiroNumero / segundoNumero));
+    }
+    public static void verificarPositivoNegativoZero(){
+        //3.Crie um programa que verifica se um número digitado pelo usuário é positivo, negativo ou zero.
+        System.out.println("Digite um número inteiro: ");
+        Scanner scanner = new Scanner(System.in);
+        int numero = scanner.nextInt();
+        if (numero > 0){
+            System.out.println("O número é positivo!");
+        } else if (numero < 0) {
+            System.out.println("O número é negativo!");
+        } else {
+            System.out.println("O número é igual a 0");
+        }
+    }
+    public static void verificarDiaSemana(){
+        //4.Solicite ao usuário um dia da semana (em formato numérico de 1 a 7) e exiba o nome correspondente usando
+        // um bloco switch.
+        System.out.println("Digite um número correspondente a um dia da semana considerando o (1) Domingo");
+        Scanner scanner = new Scanner(System.in);
+        int diaSemana = scanner.nextInt();
+        switch (diaSemana){
+            case 1:
+                System.out.println("Domingo");
+                break;
+            case 2:
+                System.out.println("Segunda-feira");
+                break;
+            case 3:
+                System.out.println("Terça-feira");
+                break;
+            case 4:
+                System.out.println("Quarta-feira");
+                break;
+            case 5:
+                System.out.println("Quinta-feira");
+                break;
+            case 6:
+                System.out.println("Sexta-feira");
+                break;
+            case 7:
+                System.out.println("Sábado");
+                break;
+            default:
+                System.out.println("Dia da semana inválido!");
+        }
+    }
+
     public static  void verificarNumeroInteiro(){
         //5.Escreva um programa em Java que solicita ao usuário um número inteiro.
         System.out.println("Digite um número inteiro: ");
