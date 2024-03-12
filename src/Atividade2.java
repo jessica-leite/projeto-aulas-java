@@ -79,12 +79,13 @@ public class Atividade2 {
 
         // Com base nesse número, o programa deve realizar as seguintes ações:
         //1. Se o número for positivo, armazene-o em uma variável e exiba uma mensagem indicando que é positivo.
+        //2. Se o número for negativo, armazene o valor absoluto em uma variável e exiba uma mensagem indicando que é negativo.
         if (numero > 0){
             System.out.println("O número " + numero + " é positivo!");
-        }
-        //2. Se o número for negativo, armazene o valor absoluto em uma variável e exiba uma mensagem indicando que é negativo.
-        if(numero < 0){
-            System.out.println("O número " + numero + " é negativo!");
+        } else if(numero < 0){
+            System.out.println("O número " + (numero * -1) + " é negativo!");
+        }else{
+            System.out.println("O número é zero!");
         }
         //3. Utilize um bloco switch para verificar se o número é par ou ímpar. Exiba uma mensagem correspondente.
         switch (numero%2){
@@ -95,6 +96,8 @@ public class Atividade2 {
             case -1:
                 System.out.println("O número é ímpar!");
                 break;
+            default:
+                System.out.println("O número é neutro!");
         }
     }
 
