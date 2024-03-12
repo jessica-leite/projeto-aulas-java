@@ -4,7 +4,51 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Atividade2.operacoesNumeros();
+        contagemRegressiva();
+    }
+
+    //Aula 12/03
+    public static void operadorTernario(){
+        Scanner leitura = new Scanner(System.in);
+        System.out.println("Digite sua idade: ");
+        int idade = leitura.nextInt();
+
+        String retorno = (idade >=18)? "Você é maior de idade" : "Você é menor de idade";
+        System.out.println(retorno);
+    }
+
+    public  static  void incrementoDecremento(){
+        System.out.println("Digite um número inteiro: ");
+        Scanner scanner = new Scanner(System.in);
+        int numero = scanner.nextInt();
+
+        System.out.println("O antecessor do número digitado é: " + (numero - 1));
+        System.out.println("O sucessor do número digitado é: " + (numero + 1));
+    }
+
+    public  static  void estruturasRepeticaoFor(){
+
+        for(int i = 1; i <= 10; i++){
+            System.out.println(i);
+        }
+
+        for (int i = 10; i >= 1; i--){
+            System.out.println(i);
+        }
+    }
+
+    public  static  void contagemRegressiva(){
+        System.out.println("Digite um número inteiro positivo: ");
+        Scanner scanner = new Scanner(System.in);
+        int numero = scanner.nextInt();
+        if(numero > 0){
+            for (int i = numero; i >= 0; i--){
+                System.out.println(i);
+            }
+        } else {
+            System.out.println("Número negativo!");
+        }
+
     }
 
     public static void atividadeInt(){

@@ -126,7 +126,7 @@ public class Atividade2 {
         //Opção 1: Cartão de crédito
         //Opção 2: Boleto bancário
         //Opção 3: Transferência bancária
-        System.out.println("\nEscolha a forma de pagamento: \n1: Cartão de crédito \n2: Boleto bancário \n3: Transferência bancária");
+        System.out.println("\nEscolha um número para a forma de pagamento: \n1: Cartão de crédito \n2: Boleto bancário \n3: Transferência bancária");
         int formaPagamento = scanner.nextInt();
         switch (formaPagamento){
             case 1:
