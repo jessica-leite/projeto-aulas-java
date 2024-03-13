@@ -46,7 +46,7 @@ public class Main {
                 System.out.println(i);
             }
         } else {
-            System.out.println("Número negativo!");
+            System.out.println("Número inválido!");
         }
 
     }
