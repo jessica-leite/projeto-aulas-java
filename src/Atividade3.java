@@ -11,6 +11,7 @@ public class Atividade3 {
     }
 
     public static void tabuada(){
+        //2 - Escreva um programa que solicite um número ao usuário e exiba a tabuada desse número de 1 a 10.
         System.out.println("====Tabuada====");
         System.out.println("\nDigite um número: ");
         Scanner scanner = new Scanner(System.in);
@@ -18,6 +19,16 @@ public class Atividade3 {
         for (int i = 1; i <= 10; i++){
             System.out.println(i + " * " + numero + " = " + (i * numero));
         }
+    }
+    public static void somaNumerosPares(){
+        //3 - Desenvolva um algoritmo que calcule a soma dos números pares de 1 a 100.
+        int soma = 0;
+        for(int i = 1; i <= 100; i++){
+            if(i % 2 == 0){
+                soma += i;
+            }
+        }
+        System.out.println("Soma dos números pares de 1 a 100: " + soma);
     }
     public static void media(){
         //6 - Faça um programa que solicite ao usuário números inteiros positivos.
@@ -32,8 +43,10 @@ public class Atividade3 {
                 continuar = false;
                 continue;
             }
-            //numeros.set(numero);
+            numeros[numeros.length] = numero;
         }
+       // double media = Math.
+        System.out.println("Média dos números digitados: " );
     }
     public static void calculadora(){
         //7 - Crie uma calculadora simples que permita ao usuário realizar operações de soma, subtração,
