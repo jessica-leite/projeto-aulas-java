@@ -4,7 +4,7 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Atividade3.listaCompras();
+        Atividade3.adivinharNumero();
     }
 
     //Aula 12/03
