@@ -2,7 +2,48 @@ import javax.annotation.processing.SupportedSourceVersion;
 import java.util.Scanner;
 
 public class Atividade3 {
+    public static void calculadora(){
+        //7 - Crie uma calculadora simples que permita ao usuário realizar operações de soma, subtração,
+        // multiplicação e divisão entre dois números, utilizando um laço de repetição para continuar operando
+        // até que o usuário decida sair.
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Olá! ");
+        boolean continuar = true;
+        while (continuar){
+            System.out.println("\nQual operação deseja fazer? \n1 - soma \n2 - subtração \n3 - multiplicação \n4 - divisão \n5 - sair");
+            int operacao = scanner.nextInt();
+            if (operacao == 5){
+                continuar = false;
+                continue;
+            }
+            System.out.println("Digite o primeiro número: ");
+            double numero1 = scanner.nextDouble();
+            System.out.println("Digite o segundo número: ");
+            double numero2 = scanner.nextDouble();
+            if(operacao == 4 && numero2 == 0){
+                System.out.println("Não é possível dividir por zero.");
+                continue;
+            }
+            switch (operacao){
+                case 1:
+                    System.out.println("Resultado da soma: " + (numero1 + numero2));
+                    break;
+                case 2:
+                    System.out.println("Resultado da subtração: " + (numero1 - numero2));
+                    break;
+                case 3:
+                    System.out.println("Resultado da multiplicação: " + (numero1 * numero2));
+                    break;
+                case 4:
+                    System.out.println("Resultado da divisão: " + (numero1 / numero2));
+                    break;
+                default:
+                    System.out.println("Opção inválida!");
+            }
 
+        }
+
+    }
     public static void adivinharNumero(){
         //8 - Implemente um jogo no qual o programa escolhe um número aleatório entre 1 e 100, e o jogador deve tentar adivinhá-lo.
         // O programa deve fornecer dicas do tipo "maior" ou "menor" conforme necessário.
