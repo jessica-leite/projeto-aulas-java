@@ -2,6 +2,39 @@ import javax.annotation.processing.SupportedSourceVersion;
 import java.util.Scanner;
 
 public class Atividade3 {
+    public static void contagemRegressiva(){
+        //1 -Crie um programa que realize uma contagem regressiva de 10 até 1, mostrando cada número na tela.
+        System.out.println("Contagem regressiva: ");
+        for(int i = 10; i > 0; i--){
+            System.out.println(i);
+        }
+    }
+
+    public static void tabuada(){
+        System.out.println("====Tabuada====");
+        System.out.println("\nDigite um número: ");
+        Scanner scanner = new Scanner(System.in);
+        int numero = scanner.nextInt();
+        for (int i = 1; i <= 10; i++){
+            System.out.println(i + " * " + numero + " = " + (i * numero));
+        }
+    }
+    public static void media(){
+        //6 - Faça um programa que solicite ao usuário números inteiros positivos.
+        // Quando o usuário digitar um número negativo, o programa deve exibir a média dos números inseridos até aquele momento.
+        Scanner scanner = new Scanner(System.in);
+        int [] numeros = new int[]{};
+        boolean continuar = true;
+        while (continuar) {
+            System.out.println("Digite um número inteiro positivo: ");
+            int numero = scanner.nextInt();
+            if (numero < 0){
+                continuar = false;
+                continue;
+            }
+            //numeros.set(numero);
+        }
+    }
     public static void calculadora(){
         //7 - Crie uma calculadora simples que permita ao usuário realizar operações de soma, subtração,
         // multiplicação e divisão entre dois números, utilizando um laço de repetição para continuar operando
