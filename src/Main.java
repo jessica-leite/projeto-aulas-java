@@ -4,8 +4,42 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Atividade3.somaNumerosPares();
+        Atividade3.media();
     }
+
+    public  static void ordenar(){
+        int[] valores = new int[]{10, 1, 12, 5, 4};
+
+        for (int i = 0; i < valores.length - 1; i++) {
+            if (valores[i] > valores[i + 1]) {
+                int backupAtual = valores[i + 1];
+                valores[i + 1] = valores[i];
+                valores[i] = backupAtual;
+                i = -1;
+            }
+        }
+    }
+
+    public static void ordenarValores(){
+        int[] numeros = new int[]{10, 1, 12, 5, 4};
+        int numeroMenor = 0;
+        for (int i = 1; i < numeros.length; i++)
+        {
+            for (int j = 0; j < numeros.length; j++)
+            {
+                if (numeros[i] < numeros[j])
+                {
+                    numeroMenor = numeros[i];
+                    numeros[i] = numeros[j];
+                    numeros[j] = numeroMenor;
+                }
+            }
+        }
+        for (int numero : numeros) {
+            System.out.println(numero);
+        }
+    }
+
 
     //Aula 12/03
     public static void operadorTernario(){
