@@ -128,7 +128,7 @@ public class Atividade3 {
         //8 - Implemente um jogo no qual o programa escolhe um número aleatório entre 1 e 100, e o jogador deve tentar adivinhá-lo.
         // O programa deve fornecer dicas do tipo "maior" ou "menor" conforme necessário.
         Scanner scanner = new Scanner(System.in);
-        int numeroAleatorio = (int)(Math.random() * 10 + 1);
+        int numeroAleatorio = (int)(Math.random() * 100 + 1);
         int numeroEscolhido = 0;
         System.out.println("Tente adivinhar o número sorteado!");
 
