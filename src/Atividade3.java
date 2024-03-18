@@ -172,18 +172,22 @@ public class Atividade3 {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Olá! ");
         int adicionarItem = 1;
-        String listaCompras = "";
-        String separador = "";
-        while(adicionarItem == 1){
+        ArrayList<String> listaCompras = new ArrayList<>();
+
+        while(adicionarItem != 2){
             System.out.println("Digite o item que deseja inserir na lista de compras: ");
-            listaCompras += separador + scanner.nextLine();
-            separador = ", ";
+            String item = scanner.nextLine();
+            listaCompras.add(item);
 
             // O programa deve exibir a lista de compras atualizada após cada inserção e perguntar se o usuário deseja adicionar mais itens.
             // O programa deve continuar executando até que o usuário decida sair.
-            System.out.println("Lista atualizada: " + listaCompras);
+            //System.out.println("Lista atualizada: " + listaCompras);
+            for(String itemLista : listaCompras){
+                System.out.print(itemLista);
+            }
             System.out.println("Deseja adicionar mais itens? \n1 - Sim \n2 - Não");
              adicionarItem = scanner.nextInt();
+             scanner.nextLine();
         }
     }
 }
