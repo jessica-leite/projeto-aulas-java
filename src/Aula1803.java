@@ -27,6 +27,9 @@ public class Aula1803 {
                     break;
                 case 2:
                     System.out.println("Digite o número da tarefa que deseja remover: ");
+                    for(String tarefa : tarefas){
+                        System.out.println((tarefas.indexOf(tarefa) + 1) + " - " + tarefa);
+                    }
                     tarefas.remove(scanner.nextInt() - 1);
                     System.out.println("Tarefa removida!");
                     break;
