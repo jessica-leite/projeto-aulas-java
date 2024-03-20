@@ -2,9 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Aula1903 {
-    public static Scanner scanner = new Scanner(System.in);
-    public static ArrayList<String> tarefas = new ArrayList<>();
-
+    static Scanner scanner = new Scanner(System.in);
+    static ArrayList<String> tarefas = new ArrayList<>();
 
     public static void listaTarefas(){
         //Você foi contratado para desenvolver um programa que irá gerenciar uma lista de tarefas diárias de um usuário.
