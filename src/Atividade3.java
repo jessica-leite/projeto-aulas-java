@@ -48,7 +48,7 @@ public class Atividade3 {
 
     public static void sequenciaFibonacci(){
         //5 - Implemente um algoritmo que exiba os primeiros 20 números da sequência de Fibonacci.
-        ArrayList<Integer> fibonacci = new ArrayList<Integer>();
+        ArrayList<Integer> fibonacci = new ArrayList<>();
         fibonacci.add(0);
         fibonacci.add(1);
         for (int i = 0; i < 18; i++){
@@ -181,11 +181,11 @@ public class Atividade3 {
 
             // O programa deve exibir a lista de compras atualizada após cada inserção e perguntar se o usuário deseja adicionar mais itens.
             // O programa deve continuar executando até que o usuário decida sair.
-            //System.out.println("Lista atualizada: " + listaCompras);
+            System.out.println("\nLista atualizada: ");
             for(String itemLista : listaCompras){
-                System.out.print(itemLista);
+                System.out.println(itemLista);
             }
-            System.out.println("Deseja adicionar mais itens? \n1 - Sim \n2 - Não");
+            System.out.println("\nDeseja adicionar mais itens? \n1 - Sim \n2 - Não");
              adicionarItem = scanner.nextInt();
              scanner.nextLine();
         }
