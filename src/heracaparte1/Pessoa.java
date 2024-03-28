@@ -11,6 +11,11 @@ public class Pessoa {
         this.endereco = endereco;
     }
 
+    public Pessoa(String nome, int idade){
+        this.Nome = nome;
+        this.Idade = idade;
+    }
+
     public void mostrarDados(){
         System.out.println("Nome: " + this.Nome + "\nIdade: " + this.Idade);
     }
