@@ -4,9 +4,9 @@ public class Inimigo {
     private int Vida;
     private  int Ataque;
 
-    public Inimigo(){
-        Vida = 20;
-        Ataque = 2;
+    public Inimigo(int vida, int ataque){
+        Vida = vida;
+        Ataque = ataque;
     }
     public void Dano(int dano) {
         Vida -= dano;
@@ -18,5 +18,9 @@ public class Inimigo {
 
     public boolean EstaVivo(){
         return Vida > 0;
+    }
+
+    public int getVida() {
+        return Math.max(Vida, 0);
     }
 }

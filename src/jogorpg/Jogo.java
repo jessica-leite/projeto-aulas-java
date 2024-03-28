@@ -6,9 +6,9 @@ public class Jogo {
     private Jogador Jogador;
     private Inimigo Inimigo;
 
-    public Jogo(){
-        Jogador = new Jogador(1, 1);
-        Inimigo = new Inimigo();
+    public Jogo(Jogador jogador, Inimigo inimigo){
+        Jogador = jogador;
+        Inimigo = inimigo;
     }
 
     public void iniciarJogo(){
@@ -21,29 +21,32 @@ public class Jogo {
         switch (opcao){
             case 1:
                 System.out.println("Você escolheu o personagem Guerreiro");
-                Jogador = new Guerreiro();
+                Jogador = new Guerreiro(20, 2);
                 break;
             case 2:
                 System.out.println("Você escolheu o personagem Mago");
-                Jogador = new Mago();
+                Jogador = new Mago(20, 1);
                 break;
         }
+
         boolean estaoVivos = true;
         while (estaoVivos){
             Jogador.Atacar(Inimigo);
             Inimigo.Atacar(Jogador);
+            System.out.println("\nSua vida está em: " + Jogador.getVida());
+            System.out.println("A vida do inimigo está em: " + Inimigo.getVida());
             estaoVivos = Jogador.EstaVivo() && Inimigo.EstaVivo();
         }
 
         if (Jogador.EstaVivo()){
-            System.out.println("Parabéns! Você venceu!");
+            System.out.println("\nParabéns! Você venceu!");
         } else {
-            System.out.println("Poxa, você foi derrotado!");
+            System.out.println("\nPoxa, você foi derrotado!");
         }
     }
 
     private int escolherPersonagem(){
-        System.out.println("Escolha seu personagem: \n1 - Guerreiro \n2 - Mago");
+        System.out.println("\nEscolha seu personagem: \n1 - Guerreiro \n2 - Mago");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextInt();
     }

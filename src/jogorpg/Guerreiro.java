@@ -1,7 +1,7 @@
 package jogorpg;
 
 public class Guerreiro extends Jogador{
-    public Guerreiro(){
-        super(20, 1);
+    public Guerreiro(int vida, int ataque){
+        super(vida, ataque);
     }
 }

@@ -9,6 +9,8 @@ public class Jogador {
         Ataque = ataque;
     }
 
+    public Jogador(){}
+
     public void Atacar(Inimigo inimigo) {
         inimigo.Dano(Ataque);
     }
@@ -19,5 +21,9 @@ public class Jogador {
 
     public boolean EstaVivo(){
         return Vida > 0;
+    }
+
+    public int getVida() {
+        return Math.max(Vida, 0);
     }
 }
