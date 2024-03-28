@@ -21,10 +21,24 @@ public class Jogo {
         switch (opcao){
             case 1:
                 System.out.println("Você escolheu o personagem Guerreiro");
+                Jogador = new Guerreiro();
                 break;
             case 2:
                 System.out.println("Você escolheu o personagem Mago");
+                Jogador = new Mago();
                 break;
+        }
+        boolean estaoVivos = true;
+        while (estaoVivos){
+            Jogador.Atacar(Inimigo);
+            Inimigo.Atacar(Jogador);
+            estaoVivos = Jogador.EstaVivo() && Inimigo.EstaVivo();
+        }
+
+        if (Jogador.EstaVivo()){
+            System.out.println("Parabéns! Você venceu!");
+        } else {
+            System.out.println("Poxa, você foi derrotado!");
         }
     }
 

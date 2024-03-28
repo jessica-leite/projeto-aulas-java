@@ -5,8 +5,8 @@ public class Inimigo {
     private  int Ataque;
 
     public Inimigo(){
-        Vida = 10;
-        Ataque = 1;
+        Vida = 20;
+        Ataque = 2;
     }
     public void Dano(int dano) {
         Vida -= dano;
@@ -16,7 +16,7 @@ public class Inimigo {
         jogador.Dano(Ataque);
     }
 
-    public boolean estaVivo(){
+    public boolean EstaVivo(){
         return Vida > 0;
     }
 }

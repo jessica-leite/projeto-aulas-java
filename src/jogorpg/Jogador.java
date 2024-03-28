@@ -9,7 +9,7 @@ public class Jogador {
         Ataque = ataque;
     }
 
-    public void atacar(Inimigo inimigo) {
+    public void Atacar(Inimigo inimigo) {
         inimigo.Dano(Ataque);
     }
 
@@ -17,7 +17,7 @@ public class Jogador {
         Vida -= dano;
     }
 
-    public boolean estaVivo(){
+    public boolean EstaVivo(){
         return Vida > 0;
     }
 }
