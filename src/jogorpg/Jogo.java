@@ -3,8 +3,12 @@ package jogorpg;
 import java.util.Scanner;
 
 public class Jogo {
-    public Jogo(){
+    private Jogador Jogador;
+    private Inimigo Inimigo;
 
+    public Jogo(){
+        Jogador = new Jogador(1, 1);
+        Inimigo = new Inimigo();
     }
 
     public void iniciarJogo(){
