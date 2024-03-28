@@ -1,12 +1,22 @@
 package jogorpg;
 
 public class Inimigo {
-    private int vida;
+    private int Vida;
+    private  int Ataque;
 
     public Inimigo(){
-        vida = 10;
+        Vida = 10;
+        Ataque = 1;
     }
-    public void dano(int dano) {
-        this.vida -= dano;
+    public void Dano(int dano) {
+        Vida -= dano;
+    }
+
+    public void Atacar(Jogador jogador){
+        jogador.Dano(Ataque);
+    }
+
+    public boolean estaVivo(){
+        return Vida > 0;
     }
 }

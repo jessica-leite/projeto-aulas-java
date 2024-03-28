@@ -10,7 +10,11 @@ public class Jogador {
     }
 
     public void atacar(Inimigo inimigo) {
-        inimigo.dano(1);
+        inimigo.Dano(Ataque);
+    }
+
+    public void Dano(int dano){
+        Vida -= dano;
     }
 
     public boolean estaVivo(){
