@@ -9,12 +9,18 @@ public class Jogo {
 
     public void iniciarJogo(){
         int opcao = escolherPersonagem();
+        while (opcao != 1 && opcao != 2){
+            System.out.println("Opção inválida!");
+            opcao = escolherPersonagem();
+        }
 
         switch (opcao){
-            case 1: break;
-            case 2: break;
-            default: System.out.println("Opção inválida!");
-            escolherPersonagem();
+            case 1:
+                System.out.println("Você escolheu o personagem Guerreiro");
+                break;
+            case 2:
+                System.out.println("Você escolheu o personagem Mago");
+                break;
         }
     }
 
