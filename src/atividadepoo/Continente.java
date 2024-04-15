@@ -22,14 +22,15 @@ public class Continente {
     private int Populacao;
     private double DensidadePopulacional;
 
-    private List<Pais> Paises = new LinkedList<Pais>() {};
+    private List<Pais> Paises = new LinkedList<>() {
+    };
 
     public Continente(String nome){
      Nome = nome;
     }
 
-    public void AdicionarPais(String nome){
-        Paises.add(new Pais(nome));
+    public void AdicionarPais(String nome, int populacao, double dimensao){
+        Paises.add(new Pais(nome, populacao, dimensao));
     }
 
     public double GetDimensao(){
