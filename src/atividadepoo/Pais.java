@@ -10,4 +10,12 @@ public class Pais {
         Populacao = populacao;
         Dimensao = dimensao;
     };
+
+    public double getDimensao() {
+        return Dimensao;
+    }
+
+    public int getPopulacao() {
+        return Populacao;
+    }
 }

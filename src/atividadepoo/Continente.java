@@ -33,6 +33,18 @@ public class Continente {
         Paises.add(new Pais(nome, populacao, dimensao));
     }
 
+    public void AdicionarPaises(List<Pais> paises){
+        Paises.addAll(paises);
+
+        for (Pais pais : paises)
+             {
+                 Dimensao += pais.getDimensao();
+                 Populacao += pais.getPopulacao();
+             };
+        DensidadePopulacional = Populacao / Dimensao;
+        }
+    }
+
     public double GetDimensao(){
         return Dimensao;
     }
