@@ -19,7 +19,7 @@ public class Main {
 
         System.out.println("\n===== Atividade 2 =====");
         Continente continente = new Continente("Oceania");
-        Continente
+        
         List<Pais> paises = new LinkedList<>(){
             {
                 new Pais("Austrália", 25705081, 7692024);

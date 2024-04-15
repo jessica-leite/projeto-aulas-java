@@ -41,8 +41,6 @@ public class Continente {
                  Dimensao += pais.getDimensao();
                  Populacao += pais.getPopulacao();
              };
-        DensidadePopulacional = Populacao / Dimensao;
-        }
     }
 
     public double GetDimensao(){
@@ -54,7 +52,7 @@ public class Continente {
     }
 
     public double GetDensidadePopulacional(){
-        return DensidadePopulacional;
+        return Populacao / Dimensao;
     }
 
     public Pais GetPaisMaiorPopulacao(){
