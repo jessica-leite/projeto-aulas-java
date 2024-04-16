@@ -1,5 +1,6 @@
 package atividadepoo;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -20,24 +21,36 @@ public class Main {
         System.out.println("\n===== Atividade 2 =====");
         Continente continente = new Continente("Oceania");
         
-        List<Pais> paises = new LinkedList<>(){
+        List<Pais> paises = new ArrayList<>() {
             {
-                new Pais("Austrália", 25705081, 7692024);
-                new Pais("Estados Federados da Micronésia", 103000, 702);
-                new Pais("Ilhas Marshall", 55500,181.4);
-                new Pais("Fiji", 884887, 18274);
-                new Pais("Ilhas Salomão", 667044, 28450);
-                new Pais("Kiribati", 120100, 811);
-                new Pais("Nauru", 10084, 21);
-                new Pais("Nova Zelândia", 5014786, 268680);
-                new Pais("Palau", 21000, 459);
-                new Pais("Papua - Nova Guiné", 9008800, 462840);
-                new Pais("Samoa", 199052, 2831);
-                new Pais("Tonga", 100651, 747);
-                new Pais("Tuvalu", 10640, 26);
-                new Pais("Vanuatu", 304500, 12189);
+                add(new Pais("Austrália", 25705081, 7692024));
+                add(new Pais("Estados Federados da Micronésia", 103000, 702));
+                add(new Pais("Ilhas Marshall", 55500, 181.4));
+                add(new Pais("Fiji", 884887, 18274));
+                add(new Pais("Ilhas Salomão", 667044, 28450));
+                add(new Pais("Kiribati", 120100, 811));
+                add(new Pais("Nauru", 10084, 21));
+                add(new Pais("Nova Zelândia", 5014786, 268680));
+                add(new Pais("Palau", 21000, 459));
+                add(new Pais("Papua - Nova Guiné", 9008800, 462840));
+                add(new Pais("Samoa", 199052, 2831));
+                add(new Pais("Tonga", 100651, 747));
+                add(new Pais("Tuvalu", 10640, 26));
+                add(new Pais("Vanuatu", 304500, 12189));
             }
         };
+
+        System.out.println("==========Países: " + paises);
         continente.AdicionarPaises(paises);
+
+        System.out.println("\nContinente escolhido: " + continente.GetNome());
+        System.out.println("\nDimensão total do continente: " + continente.GetDimensao());
+        System.out.println("\nPopulação total do continente: " + continente.GetPopulacao());
+        System.out.println("\nDensidade populacional: " + continente.GetDensidadePopulacional());
+        System.out.println("\nPaís com maior população: " + continente.GetPaisMaiorPopulacao());
+        System.out.println("\nPaís com menor populaçao: " + continente.GetPaisMenorPopulacao());
+        System.out.println("\nPaís com maior dimensão territorial: " + continente.GetPaisMaiorDimensaoTerritorial());
+        System.out.println("\nPaís com menor dimensão territorial: " + continente.GetPaisMenorDimensaoTerritorial());
+        System.out.println("\nRazão territorial entre o maior e o menor país: " + continente.GetRazaoTerritorialMaiorEMenorPais());
     }
 }

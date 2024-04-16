@@ -20,7 +20,6 @@ public class Continente {
     private String Nome;
     private double Dimensao;
     private int Populacao;
-    private double DensidadePopulacional;
 
     private List<Pais> Paises = new LinkedList<>() {
     };
@@ -29,26 +28,34 @@ public class Continente {
      Nome = nome;
     }
 
+    public String GetNome() {
+        return Nome;
+    }
+
+    public double GetDimensao() {
+        return Dimensao;
+    }
+
+    public int GetPopulacao() {
+        return Populacao;
+    }
+
     public void AdicionarPais(String nome, int populacao, double dimensao){
         Paises.add(new Pais(nome, populacao, dimensao));
+        Dimensao += dimensao;
+        Populacao += populacao;
     }
 
     public void AdicionarPaises(List<Pais> paises){
         Paises.addAll(paises);
 
-        for (Pais pais : paises)
+        for (Pais pais : Paises)
              {
+                 System.out.println(pais.getDimensao());
                  Dimensao += pais.getDimensao();
+                 System.out.println(pais.getPopulacao());
                  Populacao += pais.getPopulacao();
              };
-    }
-
-    public double GetDimensao(){
-        return Dimensao;
-    }
-
-    public int GetPopulacao(){
-        return Populacao;
     }
 
     public double GetDensidadePopulacional(){
@@ -56,23 +63,50 @@ public class Continente {
     }
 
     public Pais GetPaisMaiorPopulacao(){
-        return null;
+        Pais paisMaiorPopulacao = new Pais();
+        for(Pais pais : Paises){
+            if(pais.getPopulacao() > paisMaiorPopulacao.getPopulacao()){
+                paisMaiorPopulacao = pais;
+            }
+        }
+        return paisMaiorPopulacao;
     }
 
     public Pais GetPaisMenorPopulacao(){
-        return null;
+        Pais paisMenorPopulacao = new Pais();
+        for(Pais pais : Paises){
+            if(pais.getPopulacao() < paisMenorPopulacao.getPopulacao()){
+                paisMenorPopulacao = pais;
+            }
+        }
+        return paisMenorPopulacao;
     }
 
     public Pais GetPaisMaiorDimensaoTerritorial(){
-        return null;
+        Pais paisMaiorDimensaoTerritorial = new Pais();
+        for(Pais pais : Paises){
+            if(pais.getPopulacao() > paisMaiorDimensaoTerritorial.getDimensao()){
+                paisMaiorDimensaoTerritorial = pais;
+            }
+        }
+        return paisMaiorDimensaoTerritorial;
     }
 
     public Pais GetPaisMenorDimensaoTerritorial(){
-        return null;
+        Pais paisMenorDimensaoTerritorial = new Pais();
+        for(Pais pais : Paises){
+            if(pais.getPopulacao() < paisMenorDimensaoTerritorial.getDimensao()){
+                paisMenorDimensaoTerritorial = pais;
+            }
+        }
+        return paisMenorDimensaoTerritorial;
     }
 
     public double GetRazaoTerritorialMaiorEMenorPais(){
-        return 0;
+        Pais paisMaiorDimensaoTerritorial = GetPaisMaiorDimensaoTerritorial();
+        Pais paisMenorDimensaoTerritorial = GetPaisMenorDimensaoTerritorial();
+
+        return paisMaiorDimensaoTerritorial.getDimensao() / paisMenorDimensaoTerritorial.getDimensao();
     }
 }
 

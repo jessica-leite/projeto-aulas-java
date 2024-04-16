@@ -11,6 +11,8 @@ public class Pais {
         Dimensao = dimensao;
     };
 
+    public Pais(){}
+
     public double getDimensao() {
         return Dimensao;
     }
