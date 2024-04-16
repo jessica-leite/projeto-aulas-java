@@ -3,9 +3,9 @@ package atividadepoo;
 public class Pais {
     private String Nome;
     private int Populacao;
-    private double Dimensao;
+    private int Dimensao;
 
-    public Pais(String nome, int populacao, double dimensao){
+    public Pais(String nome, int populacao, int dimensao){
         Nome = nome;
         Populacao = populacao;
         Dimensao = dimensao;
@@ -13,7 +13,7 @@ public class Pais {
 
     public Pais(){}
 
-    public double getDimensao() {
+    public int getDimensao() {
         return Dimensao;
     }
 

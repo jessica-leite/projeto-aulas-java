@@ -25,7 +25,7 @@ public class Main {
             {
                 add(new Pais("Austrália", 25705081, 7692024));
                 add(new Pais("Estados Federados da Micronésia", 103000, 702));
-                add(new Pais("Ilhas Marshall", 55500, 181.4));
+                add(new Pais("Ilhas Marshall", 55500, 181));
                 add(new Pais("Fiji", 884887, 18274));
                 add(new Pais("Ilhas Salomão", 667044, 28450));
                 add(new Pais("Kiribati", 120100, 811));
@@ -39,9 +39,8 @@ public class Main {
                 add(new Pais("Vanuatu", 304500, 12189));
             }
         };
-
-        System.out.println("==========Países: " + paises);
         continente.AdicionarPaises(paises);
+        System.out.println("==========Países: " + paises);
 
         System.out.println("\nContinente escolhido: " + continente.GetNome());
         System.out.println("\nDimensão total do continente: " + continente.GetDimensao());

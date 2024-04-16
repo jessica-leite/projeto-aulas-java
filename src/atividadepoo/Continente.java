@@ -18,7 +18,7 @@ public class Continente {
     //j) Um método que retorne a razão territorial do maior pais em relação ao menor país.
 
     private String Nome;
-    private double Dimensao;
+    private int Dimensao;
     private int Populacao;
 
     private List<Pais> Paises = new LinkedList<>() {
@@ -40,7 +40,7 @@ public class Continente {
         return Populacao;
     }
 
-    public void AdicionarPais(String nome, int populacao, double dimensao){
+    public void AdicionarPais(String nome, int populacao, int dimensao){
         Paises.add(new Pais(nome, populacao, dimensao));
         Dimensao += dimensao;
         Populacao += populacao;
@@ -55,7 +55,7 @@ public class Continente {
                  Dimensao += pais.getDimensao();
                  System.out.println(pais.getPopulacao());
                  Populacao += pais.getPopulacao();
-             };
+             }
     }
 
     public double GetDensidadePopulacional(){
@@ -93,7 +93,7 @@ public class Continente {
     }
 
     public Pais GetPaisMenorDimensaoTerritorial(){
-        Pais paisMenorDimensaoTerritorial = new Pais();
+        Pais paisMenorDimensaoTerritorial = Paises.getFirst();
         for(Pais pais : Paises){
             if(pais.getPopulacao() < paisMenorDimensaoTerritorial.getDimensao()){
                 paisMenorDimensaoTerritorial = pais;
@@ -105,8 +105,8 @@ public class Continente {
     public double GetRazaoTerritorialMaiorEMenorPais(){
         Pais paisMaiorDimensaoTerritorial = GetPaisMaiorDimensaoTerritorial();
         Pais paisMenorDimensaoTerritorial = GetPaisMenorDimensaoTerritorial();
-
-        return paisMaiorDimensaoTerritorial.getDimensao() / paisMenorDimensaoTerritorial.getDimensao();
+        double razao = paisMaiorDimensaoTerritorial.getDimensao() / paisMenorDimensaoTerritorial.getDimensao();
+        return razao;
     }
 }
 
