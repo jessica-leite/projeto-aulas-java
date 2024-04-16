@@ -51,10 +51,8 @@ public class Continente {
 
         for (Pais pais : Paises)
              {
-                 System.out.println(pais.getDimensao());
-                 Dimensao += pais.getDimensao();
-                 System.out.println(pais.getPopulacao());
-                 Populacao += pais.getPopulacao();
+                 Dimensao += pais.GetDimensao();
+                 Populacao += pais.GetPopulacao();
              }
     }
 
@@ -65,7 +63,7 @@ public class Continente {
     public Pais GetPaisMaiorPopulacao(){
         Pais paisMaiorPopulacao = new Pais();
         for(Pais pais : Paises){
-            if(pais.getPopulacao() > paisMaiorPopulacao.getPopulacao()){
+            if(pais.GetPopulacao() > paisMaiorPopulacao.GetPopulacao()){
                 paisMaiorPopulacao = pais;
             }
         }
@@ -73,9 +71,9 @@ public class Continente {
     }
 
     public Pais GetPaisMenorPopulacao(){
-        Pais paisMenorPopulacao = new Pais();
+        Pais paisMenorPopulacao = Paises.getFirst();
         for(Pais pais : Paises){
-            if(pais.getPopulacao() < paisMenorPopulacao.getPopulacao()){
+            if(pais.GetPopulacao() < paisMenorPopulacao.GetPopulacao()){
                 paisMenorPopulacao = pais;
             }
         }
@@ -85,7 +83,7 @@ public class Continente {
     public Pais GetPaisMaiorDimensaoTerritorial(){
         Pais paisMaiorDimensaoTerritorial = new Pais();
         for(Pais pais : Paises){
-            if(pais.getPopulacao() > paisMaiorDimensaoTerritorial.getDimensao()){
+            if(pais.GetPopulacao() > paisMaiorDimensaoTerritorial.GetDimensao()){
                 paisMaiorDimensaoTerritorial = pais;
             }
         }
@@ -95,7 +93,7 @@ public class Continente {
     public Pais GetPaisMenorDimensaoTerritorial(){
         Pais paisMenorDimensaoTerritorial = Paises.getFirst();
         for(Pais pais : Paises){
-            if(pais.getPopulacao() < paisMenorDimensaoTerritorial.getDimensao()){
+            if(pais.GetPopulacao() < paisMenorDimensaoTerritorial.GetDimensao()){
                 paisMenorDimensaoTerritorial = pais;
             }
         }
@@ -105,7 +103,7 @@ public class Continente {
     public double GetRazaoTerritorialMaiorEMenorPais(){
         Pais paisMaiorDimensaoTerritorial = GetPaisMaiorDimensaoTerritorial();
         Pais paisMenorDimensaoTerritorial = GetPaisMenorDimensaoTerritorial();
-        double razao = paisMaiorDimensaoTerritorial.getDimensao() / paisMenorDimensaoTerritorial.getDimensao();
+        double razao = paisMaiorDimensaoTerritorial.GetDimensao() / paisMenorDimensaoTerritorial.GetDimensao();
         return razao;
     }
 }

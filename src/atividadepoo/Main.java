@@ -40,16 +40,23 @@ public class Main {
             }
         };
         continente.AdicionarPaises(paises);
-        System.out.println("==========Países: " + paises);
 
         System.out.println("\nContinente escolhido: " + continente.GetNome());
         System.out.println("\nDimensão total do continente: " + continente.GetDimensao());
         System.out.println("\nPopulação total do continente: " + continente.GetPopulacao());
         System.out.println("\nDensidade populacional: " + continente.GetDensidadePopulacional());
-        System.out.println("\nPaís com maior população: " + continente.GetPaisMaiorPopulacao());
-        System.out.println("\nPaís com menor populaçao: " + continente.GetPaisMenorPopulacao());
-        System.out.println("\nPaís com maior dimensão territorial: " + continente.GetPaisMaiorDimensaoTerritorial());
-        System.out.println("\nPaís com menor dimensão territorial: " + continente.GetPaisMenorDimensaoTerritorial());
+
+        Pais paisMaiorPopulacao = continente.GetPaisMaiorPopulacao();
+        System.out.println("\nPaís com maior população: " + paisMaiorPopulacao.GetNome() + " " + paisMaiorPopulacao.GetPopulacao());
+
+        Pais paisMenorPopulacao = continente.GetPaisMenorPopulacao();
+        System.out.println("\nPaís com menor populaçao: " + paisMenorPopulacao.GetNome() + " " + paisMenorPopulacao.GetPopulacao());
+
+        Pais paisMaiorDimensao = continente.GetPaisMaiorDimensaoTerritorial();
+        System.out.println("\nPaís com maior dimensão territorial: " + paisMaiorDimensao.GetNome() + " " + paisMaiorDimensao.GetDimensao());
+
+        Pais paisMenorDimensao = continente.GetPaisMenorDimensaoTerritorial();
+        System.out.println("\nPaís com menor dimensão territorial: " + paisMenorDimensao.GetNome() + " " + paisMenorDimensao.GetDimensao());
         System.out.println("\nRazão territorial entre o maior e o menor país: " + continente.GetRazaoTerritorialMaiorEMenorPais());
     }
 }

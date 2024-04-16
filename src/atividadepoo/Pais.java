@@ -13,11 +13,15 @@ public class Pais {
 
     public Pais(){}
 
-    public int getDimensao() {
+    public int GetDimensao() {
         return Dimensao;
     }
 
-    public int getPopulacao() {
+    public int GetPopulacao() {
         return Populacao;
+    }
+
+    public String GetNome() {
+        return Nome;
     }
 }
